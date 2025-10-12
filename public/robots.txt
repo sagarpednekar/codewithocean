@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.codewithocean.online
+
+# Sitemaps
+Sitemap: https://www.codewithocean.online/sitemap.xml
