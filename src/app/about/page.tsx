@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { ChevronRight, ChevronDown, ExternalLink } from "lucide-react";
 
@@ -120,7 +121,8 @@ const About = () => {
          */`,
   };
   return (
-    <>
+    <div className="flex h-[calc(100vh-120px)]">
+
       {/* Sidebar */}
       <aside className="w-64 border-r border-slate-700/50 overflow-y-auto">
         <div className="p-4">
@@ -249,43 +251,7 @@ const About = () => {
           {aboutContent[activeSection]}
         </pre>
       </div>
-
-      {/* Code Snippets Sidebar */}
-      {/* <div className="w-96 border-l border-slate-700/50 p-6 space-y-6 overflow-y-auto">
-                <div className="text-slate-400 text-sm">// Code snippet showcase:</div>
-
-                {codeSnippets.map((snippet) => (
-                    <div
-                        key={snippet.id}
-                        className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50"
-                    >
-                        <div className="flex items-center justify-between mb-3">
-                            <div className="flex items-center gap-2">
-                                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-blue-500" />
-                                <div>
-                                    <div className="text-white text-sm">{snippet.username}</div>
-                                    <div className="text-slate-500 text-xs">
-                                        Created {snippet.createdAt}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-3 text-slate-400 text-xs">
-                                <button className="hover:text-white transition-colors">
-                                    details
-                                </button>
-                                <div className="flex items-center gap-1">
-                                    <span>⭐</span>
-                                    <span>{snippet.stars} stars</span>
-                                </div>
-                            </div>
-                        </div>
-                        <pre className="text-xs text-slate-300 bg-slate-900 p-3 rounded overflow-x-auto">
-                            {snippet.code}
-                        </pre>
-                    </div>
-                ))}
-            </div> */}
-    </>
+    </div>
   );
 };
 
