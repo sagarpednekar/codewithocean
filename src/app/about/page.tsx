@@ -122,7 +122,6 @@ const About = () => {
   };
   return (
     <div className="flex h-[calc(100vh-120px)]">
-
       {/* Sidebar */}
       <aside className="w-64 border-r border-slate-700/50 overflow-y-auto">
         <div className="p-4">
