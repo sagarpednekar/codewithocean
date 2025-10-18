@@ -1,5 +1,6 @@
+"use client";
 import React, { useState } from "react";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 import {
   SiAwslambda,
   SiCss3,

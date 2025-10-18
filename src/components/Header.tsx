@@ -1,13 +1,15 @@
+"use client";
 import { Github } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type HeaderProps = {
-  activeTab: string;
-  setActiveTab: (tab: string) => void;
+  activeTab?: string;
+  setActiveTab?: (tab: string) => void;
 };
 
 const Header = ({ activeTab, setActiveTab }: HeaderProps) => {
+  const router = useRouter();
   const tabs = [
-    { id: "hello", label: "_hello" },
     { id: "about", label: "_about-me" },
     { id: "projects", label: "_projects" },
     { id: "contact", label: "_contact-me" },
@@ -18,7 +20,9 @@ const Header = ({ activeTab, setActiveTab }: HeaderProps) => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="px-6 py-4 border-r border-slate-700/50">
-          <span className="text-slate-400">sagar-pednekar</span>
+          <span className="text-slate-400" onClick={() => {
+                router.push('/');
+              }}>sagar-pednekar</span>
         </div>
 
         {/* Navigation Tabs */}
@@ -26,7 +30,9 @@ const Header = ({ activeTab, setActiveTab }: HeaderProps) => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => {
+                router.push(`/${tab.id}`);
+              }}
               className={`px-6 py-4 border-r border-slate-700/50 hover:bg-slate-900/50 transition-colors ${
                 activeTab === tab.id
                   ? "border-b-2 border-orange-400 text-white"

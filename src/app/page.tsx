@@ -1,27 +1,37 @@
-"use client";
-import { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Projects from "@/pages/Projects";
-import Contact from "@/pages/Contact";
+import SnakeGame from "@/components/SnakeGame";
+
 
 export default function Page() {
-  const [activeTab, setActiveTab] = useState("hello");
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-300 font-mono">
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+    <main className="flex" style={{ height: "calc(100vh - 120px)" }}>
+      <div className="flex-1 flex items-center justify-between px-20">
+        {/* Left Content */}
+        <div>
+          <div className="text-slate-400 mb-2">Hi all. I am</div>
+          <h1 className="text-6xl font-bold text-white mb-4">Sagar Pednekar</h1>
+          <div className="text-2xl text-teal-400 mb-8">
+            &gt; Full-Stack developer
+          </div>
 
-      <main className="flex" style={{ height: "calc(100vh - 120px)" }}>
-        {activeTab === "hello" && <Home />}
-        {activeTab === "about" && <About />}
-        {activeTab === "projects" && <Projects />}
-        {activeTab === "contact" && <Contact />}
-      </main>
+          <div className="text-slate-500 space-y-1 mb-6">
+            <div>// complete the game to continue</div>
+            <div>// find my profile on Github:</div>
+            <div>
+              <span className="text-teal-400">const</span>{" "}
+              <span className="text-purple-400">githubLink</span> ={" "}
+              <span className="text-orange-300">
+                "https://github.com/sagarpednekar"
+              </span>
+            </div>
+          </div>
+        </div>
 
-      <Footer />
-    </div>
+        {/* Snake Game */}
+        <SnakeGame />
+      </div>
+    </main>
+
+
   );
 }
