@@ -1,8 +1,6 @@
 import SnakeGame from "@/components/SnakeGame";
 
-
 export default function Page() {
-
   return (
     <main className="flex" style={{ height: "calc(100vh - 120px)" }}>
       <div className="flex-1 flex items-center justify-between px-20">
@@ -31,7 +29,5 @@ export default function Page() {
         <SnakeGame />
       </div>
     </main>
-
-
   );
 }

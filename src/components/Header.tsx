@@ -20,9 +20,14 @@ const Header = ({ activeTab, setActiveTab }: HeaderProps) => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="px-6 py-4 border-r border-slate-700/50">
-          <span className="text-slate-400" onClick={() => {
-                router.push('/');
-              }}>sagar-pednekar</span>
+          <span
+            className="text-slate-400"
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            sagar-pednekar
+          </span>
         </div>
 
         {/* Navigation Tabs */}
